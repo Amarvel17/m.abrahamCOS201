@@ -102,7 +102,7 @@ int main()
     if (r == 7 || r == 77) {
         promo = 500;
     }
-
+ 
     // Final total
     total = regFee + lodgingCost - promo;
 
@@ -121,4 +121,4 @@ int main()
 
     return 0;
 }
-
+       

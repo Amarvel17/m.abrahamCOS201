@@ -13,8 +13,8 @@ int main()
     bool isPAU;
 
     cout << "Welcome to PAU Short Courses Registration Portal!\n";
-    cout << "Enter your full name: ";
-    getline(cin, name);
+    cout << "Enter your name: ";
+    cin >> name; // replaced getline with cin
 
     cout << "Are you a PAU student? (1 = Yes, 0 = No): ";
     cin >> isPAU;
@@ -35,25 +35,32 @@ int main()
     cout << "Select a course (1-5): ";
     cin >> course;
 
-    // Multi-way if-else for courses
-    if (course == 1) {
-        courseName = "Photography";
-        days = 3; regFee = 10000;
-    } else if (course == 2) {
-        courseName = "Painting";
-        days = 5; regFee = 8000;
-    } else if (course == 3) {
-        courseName = "Fish Farming";
-        days = 7; regFee = 15000;
-    } else if (course == 4) {
-        courseName = "Baking";
-        days = 5; regFee = 13000;
-    } else if (course == 5) {
-        courseName = "Public Speaking";
-        days = 2; regFee = 5000;
-    } else {
-        cout << "Invalid course selection.\n";
-        return 0;
+    // Use switch for course selection
+    switch (course)
+    {
+        case 1:
+            courseName = "Photography";
+            days = 3; regFee = 10000;
+            break;
+        case 2:
+            courseName = "Painting";
+            days = 5; regFee = 8000;
+            break;
+        case 3:
+            courseName = "Fish Farming";
+            days = 7; regFee = 15000;
+            break;
+        case 4:
+            courseName = "Baking";
+            days = 5; regFee = 13000;
+            break;
+        case 5:
+            courseName = "Public Speaking";
+            days = 2; regFee = 5000;
+            break;
+        default:
+            cout << "Invalid course selection.\n";
+            return 0;
     }
 
     cout << "\nCamp House options:\n";
@@ -65,20 +72,27 @@ int main()
     cout << "Select location (1-5): ";
     cin >> location;
 
-    // Multi-way if-else for locations
-    if (location == 1) {
-        locationName = "Camp House A"; lodgingPerDay = 10000;
-    } else if (location == 2) {
-        locationName = "Camp House B"; lodgingPerDay = 2500;
-    } else if (location == 3) {
-        locationName = "Camp House C"; lodgingPerDay = 5000;
-    } else if (location == 4) {
-        locationName = "Camp House D"; lodgingPerDay = 13000;
-    } else if (location == 5) {
-        locationName = "Camp House E"; lodgingPerDay = 5000;
-    } else {
-        cout << "Invalid location selection.\n";
-        return 0;
+    // Use switch for location selection
+    switch (location)
+    {
+        case 1:
+            locationName = "Camp House A"; lodgingPerDay = 10000;
+            break;
+        case 2:
+            locationName = "Camp House B"; lodgingPerDay = 2500;
+            break;
+        case 3:
+            locationName = "Camp House C"; lodgingPerDay = 5000;
+            break;
+        case 4:
+            locationName = "Camp House D"; lodgingPerDay = 13000;
+            break;
+        case 5:
+            locationName = "Camp House E"; lodgingPerDay = 5000;
+            break;
+        default:
+            cout << "Invalid location selection.\n";
+            return 0;
     }
 
     // Compute lodging cost
