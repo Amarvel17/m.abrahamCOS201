@@ -14,7 +14,7 @@ int main()
 
     cout << "Welcome to PAU Short Courses Registration Portal!\n";
     cout << "Enter your name: ";
-    cin >> name; // replaced getline with cin
+    cin >> name; 
 
     cout << "Are you a PAU student? (1 = Yes, 0 = No): ";
     cin >> isPAU;
@@ -126,7 +126,7 @@ int main()
     cout << "Course: " << courseName << "   Days: " << days << endl;
     cout << "Registration: " << regFee;
     cout << "  (reg discount: " << regDiscount << ")\n";
-    cout << "Lodging: " << lodgingPerDay << " × " << days << " = " 
+    cout << "Lodging: " << lodgingPerDay << " Ã— " << days << " = " 
          << (lodgingPerDay * days) << "  (lodging discount: " << lodgingDiscount << ")\n";
     cout << "Random draw: " << r << "  Promo applied: " << promo << endl;
     cout << "--------------------------------\n";
