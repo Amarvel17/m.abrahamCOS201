@@ -1,0 +1,3 @@
+Welcome to C++ class ;)
+This is FILE HANDLING CLASS
+Please add this new line
